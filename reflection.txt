@@ -1,0 +1,16 @@
+**Reflection Questions – Week 8 Lab**
+
+**1. What is the difference between find() and find_all() in BeautifulSoup, and when would you choose one over the other?**
+The `find()` method returns only the first matching HTML element, while `find_all()` returns a list of all matching elements. I would use `find()` when I only need one specific element, such as a single title or header, because it is faster and simpler. On the other hand, I would use `find_all()` when I need to extract multiple items, like all links or all paragraphs on a page. Choosing between them depends on whether I expect one result or many. Using the correct one helps make the code more efficient and easier to read.
+
+**2. Why is it important to check a website's robots.txt file before scraping it, and what ethical or legal issues could arise from ignoring it?**
+The `robots.txt` file tells web scrapers which parts of a site are allowed or disallowed for automated access. Checking it is important because it helps ensure that you are respecting the website owner's rules. Ignoring it could lead to ethical issues, such as overloading a server or accessing restricted data. It could also cause legal problems if the website has terms of service that prohibit scraping. Following these guidelines shows responsible and respectful use of web data.
+
+**3. How do CSS selectors used with BeautifulSoup's select() method compare to navigating the HTML tree manually? What are the advantages of each approach?**
+CSS selectors with the `select()` method allow you to target elements using familiar syntax like classes, IDs, and tags in a concise way. This makes the code shorter and often easier to understand. Manual navigation, such as using `.parent`, `.children`, or `.next_sibling`, gives more control over moving through the HTML structure step by step. The advantage of CSS selectors is simplicity and readability, while manual navigation is better for more complex or dynamic structures. Both approaches are useful depending on the situation.
+
+**4. In Exercise 5, why was a time.sleep(1) delay included in the scraper, and what could happen to your scraper or the target server if you removed it?**
+The `time.sleep(1)` delay was included to slow down the scraper so it does not send too many requests in a short period of time. This helps prevent overwhelming the server and reduces the risk of being blocked. If the delay were removed, the scraper could send requests too quickly, which might cause the server to crash or trigger security systems. Many websites detect rapid requests and may temporarily or permanently block your IP address. Adding delays is an important part of responsible scraping.
+
+**5. How could the web scraping skills practiced in this lab be applied to a real-world project in your field of study or a future career role?**
+Web scraping can be used to collect large amounts of data automatically from websites, which is useful in many fields. For example, in business or data analysis, it could be used to track prices, analyze competitors, or gather customer reviews. In software development, it could help build tools that aggregate information from multiple sources. These skills are valuable for automating repetitive tasks and making data-driven decisions. Learning web scraping provides a strong foundation for working with real-world data.
